@@ -1,6 +1,6 @@
-import 'package:breaking_bad/helpers/variable_breakpoints.dart';
-import 'package:breaking_bad/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:breaking_bad/screens/screens.dart';
+import 'package:breaking_bad/helpers/variable_breakpoints.dart';
 
 void main() {
   runApp(const MyApp());
