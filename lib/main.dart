@@ -13,8 +13,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Breaking Bad Mobile App',
-      theme: ThemeData(primaryColor: primaryColor),
-      home: const SplashScreen(),
+      theme: ThemeData(
+        primaryColor: primaryColor,
+        appBarTheme: AppBarTheme(
+          backgroundColor: primaryColor,
+        ),
+      ),
+      home: const MainScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

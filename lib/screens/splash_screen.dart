@@ -28,8 +28,8 @@ class _SplashScreen extends State<SplashScreen> {
 
     return Scaffold(
       backgroundColor: primaryColor,
-      body: const Center(
-        child: SplashLogo(),
+      body: Center(
+        child: Logo(),
       ),
     );
   }

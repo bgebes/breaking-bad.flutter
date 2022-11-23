@@ -24,7 +24,7 @@ flutter:
 
   assets:
     - assets/images/logo_vertical.png
-  #   - images/a_dot_ham.jpeg
+    - assets/images/logo_horizontal.png
 
   # fonts:
   #   - family: Schyler
