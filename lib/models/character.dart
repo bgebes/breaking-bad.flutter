@@ -1,26 +1,53 @@
 import 'package:breaking_bad/models/occupation.dart';
 
 class Character {
-  String? name;
-  String? nickname;
-  String? birthday;
-  List<Occupation>? occupations;
+  final String imgUrl;
+  final String name;
+  final String nickname;
+  final String birthday;
+  final List<Occupation> occupations;
 
-  Character({this.name, this.nickname, this.birthday, this.occupations});
+  const Character({
+    required this.imgUrl,
+    required this.name,
+    required this.nickname,
+    required this.birthday,
+    required this.occupations,
+  });
 
-  String? get getName {
+  factory Character.fromJson(Map<String, dynamic> json) {
+    List<Occupation> occups = [];
+
+    for (var occup in json["occupation"]) {
+      occups.add(Occupation(title: occup));
+    }
+
+    return Character(
+      imgUrl: json["img"],
+      name: json["name"],
+      nickname: json["nickname"],
+      birthday: json["birthday"],
+      occupations: occups,
+    );
+  }
+
+  String get getImgUrl {
+    return imgUrl;
+  }
+
+  String get getName {
     return name;
   }
 
-  String? get getNickname {
+  String get getNickname {
     return nickname;
   }
 
-  String? get getBirthday {
+  String get getBirthday {
     return birthday;
   }
 
-  List<Occupation>? get getOccupations {
+  List<Occupation> get getOccupations {
     return occupations;
   }
 }

@@ -1,7 +1,9 @@
-import 'package:breaking_bad/helpers/variable_breakpoints.dart';
-import 'package:breaking_bad/widgets/character_card.dart';
 import 'package:flutter/material.dart';
+import 'package:breaking_bad/actions/actions.dart';
 import 'package:breaking_bad/widgets/widgets.dart';
+import 'package:breaking_bad/models/character.dart';
+import 'package:breaking_bad/widgets/character_card.dart';
+import 'package:breaking_bad/helpers/variable_breakpoints.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -11,7 +13,19 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreen extends State<MainScreen> {
+  late Future<Character> fCharacter;
   bool isLightTheme = true;
+
+  @override
+  void initState() {
+    super.initState();
+    fCharacter = fetchCharacter();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +40,7 @@ class _MainScreen extends State<MainScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          ToolBar(),
+          const ToolBar(),
           Text(
             'Click to Card',
             style: TextStyle(
@@ -34,7 +48,7 @@ class _MainScreen extends State<MainScreen> {
               fontSize: 24,
             ),
           ),
-          CharacterCard(),
+          CharacterCard(fCharacter: fCharacter)
         ],
       ),
     );
