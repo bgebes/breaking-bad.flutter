@@ -16,6 +16,12 @@ class _MainScreen extends State<MainScreen> {
   late Future<Character> fCharacter;
   bool isLightTheme = true;
 
+  void toggleThemeState() {
+    setState(() {
+      isLightTheme = !isLightTheme;
+    });
+  }
+
   @override
   void initState() {
     super.initState();
@@ -30,6 +36,7 @@ class _MainScreen extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: isLightTheme ? Colors.white : darkPrimaryColor,
       appBar: AppBar(
         toolbarHeight: 80,
         flexibleSpace: Padding(
@@ -40,7 +47,7 @@ class _MainScreen extends State<MainScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const ToolBar(),
+          ToolBar(toggleThemeState: toggleThemeState),
           Text(
             'Click to Card',
             style: TextStyle(
