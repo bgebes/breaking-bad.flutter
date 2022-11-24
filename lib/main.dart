@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: primaryColor,
         ),
       ),
-      home: const MainScreen(),
+      home: const SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
