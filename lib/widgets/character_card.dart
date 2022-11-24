@@ -1,3 +1,4 @@
+import 'package:breaking_bad/widgets/card_back.dart';
 import 'package:flutter/material.dart';
 import 'package:breaking_bad/models/character.dart';
 import 'package:breaking_bad/widgets/card_front.dart';
@@ -28,7 +29,7 @@ class _CharacterCard extends State<CharacterCard> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
             ),
-            child: CardFront(character: character),
+            child: CardBack(character: character),
           ),
         ),
       );

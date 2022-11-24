@@ -35,7 +35,7 @@ class CardFront extends StatelessWidget {
           ),
           Text(
             "\"$nickname\"",
-            style: TextStyle(color: secondaryColor, fontSize: 30),
+            style: TextStyle(color: secondaryColor, fontSize: 40),
           ),
         ],
       ),
