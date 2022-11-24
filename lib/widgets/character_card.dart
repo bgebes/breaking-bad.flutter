@@ -1,4 +1,5 @@
 import 'package:breaking_bad/widgets/card_back.dart';
+import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:breaking_bad/models/character.dart';
 import 'package:breaking_bad/widgets/card_front.dart';
@@ -29,7 +30,11 @@ class _CharacterCard extends State<CharacterCard> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
             ),
-            child: CardBack(character: character),
+            child: FlipCard(
+              front: CardFront(character: character),
+              back: CardBack(character: character),
+              flipOnTouch: true,
+            ),
           ),
         ),
       );
