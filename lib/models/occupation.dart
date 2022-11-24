@@ -1,9 +1,5 @@
 class Occupation {
-  String? title;
+  final String title;
 
-  Occupation({this.title});
-
-  String? get getTitle {
-    return title;
-  }
+  Occupation({required this.title});
 }

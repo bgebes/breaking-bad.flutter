@@ -21,51 +21,44 @@ class CardBack extends StatelessWidget {
       ),
     );
 
-    var nickname = Container(
-      child: Column(
-        children: [
-          Text(
-            "Nickname",
-            style: headerStyles,
-          ),
-          Text(
-            character.nickname,
-            style: descStyles,
-          ),
-        ],
-      ),
+    var nickname = Column(
+      children: [
+        Text(
+          "Nickname",
+          style: headerStyles,
+        ),
+        Text(
+          character.nickname,
+          style: descStyles,
+        ),
+      ],
     );
 
-    var birthday = Container(
-      child: Column(
-        children: [
-          Text("Birthday", style: headerStyles),
-          Text(
-            character.birthday,
-            style: descStyles,
-          ),
-        ],
-      ),
+    var birthday = Column(
+      children: [
+        Text("Birthday", style: headerStyles),
+        Text(
+          character.birthday,
+          style: descStyles,
+        ),
+      ],
     );
 
     var occupationsWidgets = character.occupations
         .map(
           (e) => Text(
-            e.title!,
+            e.title,
             style: descStyles,
           ),
         )
         .toList();
 
-    var occupations = Container(
-      child: Column(
-        children: [
-          Text("Occupations", style: headerStyles),
-          ...occupationsWidgets
-        ],
-      ),
+    var occupations = Column(
+      children: [
+        Text("Occupations", style: headerStyles),
+        ...occupationsWidgets
+      ],
     );
-    ;
 
     return Container(
       color: thirdColor,

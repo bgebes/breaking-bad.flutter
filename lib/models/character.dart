@@ -30,24 +30,4 @@ class Character {
       occupations: occups,
     );
   }
-
-  String get getImgUrl {
-    return imgUrl;
-  }
-
-  String get getName {
-    return name;
-  }
-
-  String get getNickname {
-    return nickname;
-  }
-
-  String get getBirthday {
-    return birthday;
-  }
-
-  List<Occupation> get getOccupations {
-    return occupations;
-  }
 }
