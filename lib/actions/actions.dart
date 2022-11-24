@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:math';
 import 'package:http/http.dart' as http;
 import 'package:breaking_bad/models/models.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -16,10 +15,7 @@ Future<Character> fetchCharacter() async {
   if (response.statusCode == 200) {
     var data = jsonDecode(response.body);
 
-    Random r = Random();
-    int random = r.nextInt(data.length);
-
-    var randomCharacter = data[random];
+    var randomCharacter = data[1];
 
     return Character.fromJson(randomCharacter);
   } else {

@@ -26,7 +26,7 @@ class _CharacterCard extends State<CharacterCard> {
           width: size.width / 1.25,
           child: Container(
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
+              borderRadius: BorderRadius.circular(20),
             ),
             child: CardFront(character: character),
           ),
