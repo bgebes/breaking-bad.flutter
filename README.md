@@ -39,6 +39,10 @@ $ flutter test
 $ flutter test --coverage
 ```
 
+## Figma Design File
+
+https://www.figma.com/file/qaInoTalMuFo2wjRAg0gIz/breaking-bad-mobile?node-id=2%3A3&t=HpKpmxXsqeJxHI1D-1
+
 ## Screenshots
 
 <img src="https://user-images.githubusercontent.com/72809874/203870931-8f322ba5-e8bc-4fbd-9f75-952bcba78c34.png" alt="splash_screen" height="500" />
@@ -53,4 +57,4 @@ $ flutter test --coverage
 
 # Alert
 
-This project has been created to detect my level in internship. So that doesn't include any commercial purposes. And that doesn't allow any commercial offers.
+This project has been created to detect my level in internship. So this doesn't include any commercial purposes. And this doesn't allow any commercial offers.
